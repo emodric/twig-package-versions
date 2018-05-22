@@ -29,7 +29,7 @@
         "psr-4": { "Edi\\Twig\\": "src/" }
     },
     "autoload-dev": {
-        "psr-4": { "Edi\\Tests\\Twig\\": "tests/" }
+        "psr-4": { "Edi\\Twig\\Tests\\": "tests/" }
     },
     "extra": {
         "branch-alias": {

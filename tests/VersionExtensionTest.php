@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Edi\Tests\Twig;
+namespace Edi\Twig\Tests;
 
 use Edi\Twig\VersionExtension;
 use Jean85\Version;

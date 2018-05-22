@@ -35,4 +35,4 @@ services:
 Once set up, you can use the following Twig functions:
 
 * `package_version('my-vendor/package-name')` - Returns the package version string as returned by `PackageVersions\Versions::getVersion` method
-* `pretty_package_version('my-vendor/package-name')` - Returns the `Version` object as returned by `Jean85\PrettyVersions::getVersion` method
+* `pretty_package_version('my-vendor/package-name')` - Returns the `Jean85\Version` object as returned by `Jean85\PrettyVersions::getVersion` method

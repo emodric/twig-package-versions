@@ -26,10 +26,10 @@ In a Symfony project, you can register the extension as a service:
 
 ```yaml
 services:
-  twig.extension.version:
-    class: EdiModric\Twig\VersionExtension
-    tags:
-      - { name: twig.extension }
+    twig.extension.version:
+        class: EdiModric\Twig\VersionExtension
+        tags:
+            - { name: twig.extension }
 ```
 
 Once set up, you can use the following Twig functions:

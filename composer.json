@@ -1,7 +1,7 @@
 {
     "name": "emodric/twig-package-versions",
     "description": "Twig functions that return a package version by using PackageVersions library by Marco Pivetta",
-    "keywords": ["templating", "twig", "package", "version"],
+    "keywords": ["templating", "twig", "package", "version", "symfony"],
     "license": "MIT",
     "homepage": "http://github.com/emodric/twig-package-versions",
     "authors": [

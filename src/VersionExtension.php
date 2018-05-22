@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Edi\Twig;
+namespace EdiModric\Twig;
 
 use Jean85\PrettyVersions;
 use Jean85\Version;

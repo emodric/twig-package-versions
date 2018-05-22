@@ -1,5 +1,5 @@
 {
-    "name": "edi/twig-package-versions",
+    "name": "emodric/twig-package-versions",
     "description": "Twig functions that return a package version by using PackageVersions by Marco Pivetta",
     "keywords": ["templating", "twig", "package", "version"],
     "license": "MIT",
@@ -26,10 +26,10 @@
         "test": "@php vendor/bin/phpunit --colors=always"
     },
     "autoload": {
-        "psr-4": { "Edi\\Twig\\": "src/" }
+        "psr-4": { "EdiModric\\Twig\\": "src/" }
     },
     "autoload-dev": {
-        "psr-4": { "Edi\\Twig\\Tests\\": "tests/" }
+        "psr-4": { "EdiModric\\Twig\\Tests\\": "tests/" }
     },
     "extra": {
         "branch-alias": {

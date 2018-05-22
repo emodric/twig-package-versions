@@ -15,7 +15,7 @@
     beStrictAboutChangesToGlobalState="true"
 >
     <testsuites>
-        <testsuite name="Edi\Twig">
+        <testsuite name="EdiModric\Twig">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

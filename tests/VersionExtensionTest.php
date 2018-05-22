@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Edi\Twig\Tests;
+namespace EdiModric\Twig\Tests;
 
-use Edi\Twig\VersionExtension;
+use EdiModric\Twig\VersionExtension;
 use Jean85\Version;
 use PackageVersions\Versions;
 use PHPUnit\Framework\TestCase;
@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
 final class VersionExtensionTest extends TestCase
 {
     /**
-     * @var \Edi\Twig\VersionExtension
+     * @var \EdiModric\Twig\VersionExtension
      */
     private $versionExtension;
 
@@ -23,33 +23,33 @@ final class VersionExtensionTest extends TestCase
 
     public function testGetPackageVersion(): void
     {
-        $version = $this->versionExtension->getPackageVersion('edi/twig-package-versions');
+        $version = $this->versionExtension->getPackageVersion('emodric/twig-package-versions');
 
         $this->assertNotEmpty($version);
     }
 
     /**
      * @expectedException \OutOfBoundsException
-     * @expectedExceptionMessage Required package "edi/unknown" is not installed: cannot detect its version
+     * @expectedExceptionMessage Required package "emodric/unknown" is not installed: cannot detect its version
      */
     public function testGetPackageVersionThrowsOutOfBoundsExtension(): void
     {
-        $this->versionExtension->getPackageVersion('edi/unknown');
+        $this->versionExtension->getPackageVersion('emodric/unknown');
     }
 
     public function testGetPrettyPackageVersion(): void
     {
-        $version = $this->versionExtension->getPrettyPackageVersion('edi/twig-package-versions');
+        $version = $this->versionExtension->getPrettyPackageVersion('emodric/twig-package-versions');
 
         $this->assertInstanceOf(Version::class, $version);
     }
 
     /**
      * @expectedException \OutOfBoundsException
-     * @expectedExceptionMessage Required package "edi/unknown" is not installed: cannot detect its version
+     * @expectedExceptionMessage Required package "emodric/unknown" is not installed: cannot detect its version
      */
     public function testGetPrettyPackageVersionThrowsOutOfBoundsExtension(): void
     {
-        $this->versionExtension->getPrettyPackageVersion('edi/unknown');
+        $this->versionExtension->getPrettyPackageVersion('emodric/unknown');
     }
 }

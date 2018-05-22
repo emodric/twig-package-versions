@@ -10,7 +10,7 @@ directly inside your Twig templates.
 
 To install this extension, use Composer:
 
-    composer require edi/twig-package-versions
+    composer require emodric/twig-package-versions
 
 ## Using the extension
 
@@ -19,7 +19,7 @@ In PHP:
 ```php
 $twig = new Twig_Environment($loader, $options);
 
-$twig->addExtension(new Edi\Twig\VersionExtension());
+$twig->addExtension(new EdiModric\Twig\VersionExtension());
 ```
 
 In a Symfony project, you can register the extension as a service:
@@ -27,7 +27,7 @@ In a Symfony project, you can register the extension as a service:
 ```yaml
 services:
   twig.extension.version:
-    class: Edi\Twig\VersionExtension
+    class: EdiModric\Twig\VersionExtension
     tags:
       - { name: twig.extension }
 ```

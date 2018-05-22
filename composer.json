@@ -1,0 +1,39 @@
+{
+    "name": "edi/twig-package-versions",
+    "description": "Twig functions that return a package version by using PackageVersions by Marco Pivetta",
+    "keywords": ["templating", "twig", "package", "version"],
+    "license": "MIT",
+    "homepage": "http://github.com/emodric/twig-package-versions",
+    "authors": [
+        {
+            "name": "Edi Modrić",
+            "email": "edi.modric@gmail.com",
+            "homepage": "https://www.github.com/emodric"
+        }
+    ],
+    "require": {
+        "twig/twig": "^1.35.2 || ^2.4.6",
+        "ocramius/package-versions": "^1.3"
+    },
+    "require-dev": {
+        "jean85/pretty-package-versions": "^1.1",
+        "phpunit/phpunit": "^7.1"
+    },
+    "suggest": {
+        "jean85/pretty-package-versions": "Allows using pretty_package_version Twig function"
+    },
+    "scripts": {
+        "test": "@php vendor/bin/phpunit --colors=always"
+    },
+    "autoload": {
+        "psr-4": { "Edi\\Twig\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Edi\\Tests\\Twig\\": "tests/" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}

@@ -16,3 +16,6 @@ script:
 
 notifications:
   email: false
+
+after_success:
+  - cd build/logs && bash <(curl -s https://codecov.io/bash)

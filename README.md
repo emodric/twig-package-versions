@@ -1,6 +1,12 @@
 Package Versions Twig extension
 ===============================
 
+[![Build Status](https://img.shields.io/travis/emodric/twig-package-versions.svg?style=flat-square)](https://travis-ci.org/emodric/twig-package-versions)
+[![Code Coverage](https://img.shields.io/codecov/c/github/emodric/twig-package-versions.svg?style=flat-square)](https://codecov.io/gh/emodric/twig-package-versions)
+[![Downloads](https://img.shields.io/packagist/dt/emodric/twig-package-versions.svg?style=flat-square)](https://packagist.org/packages/emodric/twig-package-versions/stats)
+[![Latest stable](https://img.shields.io/packagist/v/emodric/twig-package-versions.svg?style=flat-square)](https://packagist.org/packages/emodric/twig-package-versions)
+[![License](https://img.shields.io/github/license/emodric/twig-package-versions.svg?style=flat-square)](LICENSE)
+
 This package provides simple Twig functions that wrap [PackageVersions](https://github.com/ocramius/PackageVersions)
 lib by [Marco Pivetta](https://github.com/ocramius) and [PrettyPackageVersions](https://github.com/Jean85/pretty-package-versions)
 lib by [Alessandro Lai](https://github.com/Jean85) making it possible to output version strings of your libraries

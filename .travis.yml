@@ -1,4 +1,4 @@
-disty:trusty
+dist: trusty
 sudo: false
 
 language: php

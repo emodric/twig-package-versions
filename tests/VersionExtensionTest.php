@@ -8,6 +8,8 @@ use EdiModric\Twig\VersionExtension;
 use Jean85\Version;
 use PackageVersions\Versions;
 use PHPUnit\Framework\TestCase;
+use OutOfBoundsException;
+use Twig\TwigFunction;
 
 final class VersionExtensionTest extends TestCase
 {
@@ -21,6 +23,20 @@ final class VersionExtensionTest extends TestCase
         $this->versionExtension = new VersionExtension();
     }
 
+    /**
+     * @covers \EdiModric\Twig\VersionExtension::getFunctions
+     */
+    public function testGetFunctions(): void
+    {
+        $functions = $this->versionExtension->getFunctions();
+
+        $this->assertNotEmpty($functions);
+        $this->assertContainsOnlyInstancesOf(TwigFunction::class, $functions);
+    }
+
+    /**
+     * @covers \EdiModric\Twig\VersionExtension::getPackageVersion
+     */
     public function testGetPackageVersion(): void
     {
         $version = $this->versionExtension->getPackageVersion('emodric/twig-package-versions');
@@ -29,14 +45,19 @@ final class VersionExtensionTest extends TestCase
     }
 
     /**
-     * @expectedException \OutOfBoundsException
-     * @expectedExceptionMessage Required package "emodric/unknown" is not installed: cannot detect its version
+     * @covers \EdiModric\Twig\VersionExtension::getPackageVersion
      */
     public function testGetPackageVersionThrowsOutOfBoundsExtension(): void
     {
+        $this->expectException(OutOfBoundsException::class);
+        $this->expectExceptionMessage('Required package "emodric/unknown" is not installed: cannot detect its version');
+
         $this->versionExtension->getPackageVersion('emodric/unknown');
     }
 
+    /**
+     * @covers \EdiModric\Twig\VersionExtension::getPrettyPackageVersion
+     */
     public function testGetPrettyPackageVersion(): void
     {
         $version = $this->versionExtension->getPrettyPackageVersion('emodric/twig-package-versions');
@@ -45,11 +66,13 @@ final class VersionExtensionTest extends TestCase
     }
 
     /**
-     * @expectedException \OutOfBoundsException
-     * @expectedExceptionMessage Required package "emodric/unknown" is not installed: cannot detect its version
+     * @covers \EdiModric\Twig\VersionExtension::getPrettyPackageVersion
      */
     public function testGetPrettyPackageVersionThrowsOutOfBoundsExtension(): void
     {
+        $this->expectException(OutOfBoundsException::class);
+        $this->expectExceptionMessage('Required package "emodric/unknown" is not installed: cannot detect its version');
+
         $this->versionExtension->getPrettyPackageVersion('emodric/unknown');
     }
 }

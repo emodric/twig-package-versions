@@ -17,7 +17,7 @@
     },
     "require-dev": {
         "jean85/pretty-package-versions": "^1.1",
-        "phpunit/phpunit": "^7.1"
+        "phpunit/phpunit": "^8.4"
     },
     "suggest": {
         "jean85/pretty-package-versions": "Allows using pretty_package_version Twig function"

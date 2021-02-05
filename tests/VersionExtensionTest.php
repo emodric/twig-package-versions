@@ -49,7 +49,7 @@ final class VersionExtensionTest extends TestCase
     public function testGetPackageVersionThrowsOutOfBoundsExtension(): void
     {
         $this->expectException(OutOfBoundsException::class);
-        $this->expectExceptionMessageMatches('/Package "emodric\/unknown" is not installed/');
+        $this->expectExceptionMessageMatches('/(Required package|Package) "emodric\/unknown" is not installed/');
 
         $this->versionExtension->getPackageVersion('emodric/unknown');
     }
@@ -70,7 +70,7 @@ final class VersionExtensionTest extends TestCase
     public function testGetPrettyPackageVersionThrowsOutOfBoundsExtension(): void
     {
         $this->expectException(OutOfBoundsException::class);
-        $this->expectExceptionMessageMatches('/Package "emodric\/unknown" is not installed/');
+        $this->expectExceptionMessageMatches('/(Required package|Package) "emodric\/unknown" is not installed/');
 
         $this->versionExtension->getPrettyPackageVersion('emodric/unknown');
     }

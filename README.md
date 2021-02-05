@@ -27,9 +27,9 @@ To install this extension, use Composer:
 In PHP:
 
 ```php
-$twig = new Twig_Environment($loader, $options);
+$twig = new \Twig\Environment($loader, $options);
 
-$twig->addExtension(new EdiModric\Twig\VersionExtension());
+$twig->addExtension(new \EdiModric\Twig\VersionExtension());
 ```
 
 In a Symfony project, you can register the extension as a service:

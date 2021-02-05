@@ -9,7 +9,7 @@ on:
 
 jobs:
   tests:
-    name: ${{ matrix.php }} / ${{ matrix.twig }}
+    name: PHP ${{ matrix.php }} / Twig ${{ matrix.twig }}
     runs-on: ubuntu-latest
 
     strategy:

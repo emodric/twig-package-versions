@@ -19,8 +19,7 @@
         "phpunit/phpunit": "^9.5"
     },
     "scripts": {
-        "test": "@php vendor/bin/phpunit --colors=always",
-        "coverage": "@php -dzend_extension=xdebug.so -dxdebug.mode=coverage vendor/bin/phpunit --coverage-clover=coverage.xml --colors=always"
+        "test": "@php vendor/bin/phpunit --colors=always"
     },
     "autoload": {
         "psr-4": { "EdiModric\\Twig\\": "src/" }

@@ -1,6 +1,6 @@
 {
     "name": "emodric/twig-package-versions",
-    "description": "Twig functions that return a package version by using PackageVersions library by Marco Pivetta",
+    "description": "Twig functions that return a package version by using jean85/pretty-package-versions library",
     "keywords": ["templating", "twig", "package", "version", "symfony"],
     "license": "MIT",
     "homepage": "http://github.com/emodric/twig-package-versions",
@@ -12,15 +12,11 @@
         }
     ],
     "require": {
-        "twig/twig": "^1.35.2 || ^2.4.6 || ^3.0",
-        "ocramius/package-versions": "^1.3"
+        "twig/twig": "^2.14 || ^3.2",
+        "jean85/pretty-package-versions": "^1.6 || ^2.0"
     },
     "require-dev": {
-        "jean85/pretty-package-versions": "^1.1",
-        "phpunit/phpunit": "^8.4"
-    },
-    "suggest": {
-        "jean85/pretty-package-versions": "Allows using pretty_package_version Twig function"
+        "phpunit/phpunit": "^9.5"
     },
     "scripts": {
         "test": "@php vendor/bin/phpunit --colors=always"

@@ -28,7 +28,7 @@ jobs:
       - run: composer --version
       - run: composer validate --strict
 
-      - run: composer require --no-scripts "twig/twig:${{ matrix.twig }}"
+      - run: composer require --no-scripts --no-update "twig/twig:${{ matrix.twig }}"
       - run: composer update --prefer-dist
 
       - run: composer test

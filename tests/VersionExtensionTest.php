@@ -6,9 +6,8 @@ namespace EdiModric\Twig\Tests;
 
 use EdiModric\Twig\VersionExtension;
 use Jean85\Version;
-use PackageVersions\Versions;
-use PHPUnit\Framework\TestCase;
 use OutOfBoundsException;
+use PHPUnit\Framework\TestCase;
 use Twig\TwigFunction;
 
 final class VersionExtensionTest extends TestCase
@@ -18,7 +17,7 @@ final class VersionExtensionTest extends TestCase
      */
     private $versionExtension;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->versionExtension = new VersionExtension();
     }
@@ -30,8 +29,8 @@ final class VersionExtensionTest extends TestCase
     {
         $functions = $this->versionExtension->getFunctions();
 
-        $this->assertNotEmpty($functions);
-        $this->assertContainsOnlyInstancesOf(TwigFunction::class, $functions);
+        self::assertNotEmpty($functions);
+        self::assertContainsOnlyInstancesOf(TwigFunction::class, $functions);
     }
 
     /**
@@ -41,7 +40,7 @@ final class VersionExtensionTest extends TestCase
     {
         $version = $this->versionExtension->getPackageVersion('emodric/twig-package-versions');
 
-        $this->assertNotEmpty($version);
+        self::assertNotEmpty($version);
     }
 
     /**
@@ -62,7 +61,7 @@ final class VersionExtensionTest extends TestCase
     {
         $version = $this->versionExtension->getPrettyPackageVersion('emodric/twig-package-versions');
 
-        $this->assertInstanceOf(Version::class, $version);
+        self::assertInstanceOf(Version::class, $version);
     }
 
     /**

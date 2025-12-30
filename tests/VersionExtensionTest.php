@@ -7,24 +7,20 @@ namespace EdiModric\Twig\Tests;
 use EdiModric\Twig\VersionExtension;
 use Jean85\Version;
 use OutOfBoundsException;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use Twig\TwigFunction;
 
+#[CoversClass(VersionExtension::class)]
 final class VersionExtensionTest extends TestCase
 {
-    /**
-     * @var \EdiModric\Twig\VersionExtension
-     */
-    private $versionExtension;
+    private VersionExtension $versionExtension;
 
     protected function setUp(): void
     {
         $this->versionExtension = new VersionExtension();
     }
 
-    /**
-     * @covers \EdiModric\Twig\VersionExtension::getFunctions
-     */
     public function testGetFunctions(): void
     {
         $functions = $this->versionExtension->getFunctions();
@@ -33,9 +29,6 @@ final class VersionExtensionTest extends TestCase
         self::assertContainsOnlyInstancesOf(TwigFunction::class, $functions);
     }
 
-    /**
-     * @covers \EdiModric\Twig\VersionExtension::getPackageVersion
-     */
     public function testGetPackageVersion(): void
     {
         $version = $this->versionExtension->getPackageVersion('emodric/twig-package-versions');
@@ -43,9 +36,6 @@ final class VersionExtensionTest extends TestCase
         self::assertNotEmpty($version);
     }
 
-    /**
-     * @covers \EdiModric\Twig\VersionExtension::getPackageVersion
-     */
     public function testGetPackageVersionThrowsOutOfBoundsExtension(): void
     {
         $this->expectException(OutOfBoundsException::class);
@@ -54,9 +44,6 @@ final class VersionExtensionTest extends TestCase
         $this->versionExtension->getPackageVersion('emodric/unknown');
     }
 
-    /**
-     * @covers \EdiModric\Twig\VersionExtension::getPrettyPackageVersion
-     */
     public function testGetPrettyPackageVersion(): void
     {
         $version = $this->versionExtension->getPrettyPackageVersion('emodric/twig-package-versions');
@@ -64,9 +51,6 @@ final class VersionExtensionTest extends TestCase
         self::assertInstanceOf(Version::class, $version);
     }
 
-    /**
-     * @covers \EdiModric\Twig\VersionExtension::getPrettyPackageVersion
-     */
     public function testGetPrettyPackageVersionThrowsOutOfBoundsExtension(): void
     {
         $this->expectException(OutOfBoundsException::class);

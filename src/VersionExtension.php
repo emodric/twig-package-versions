@@ -16,11 +16,11 @@ final class VersionExtension extends AbstractExtension
         return [
             new TwigFunction(
                 'package_version',
-                [$this, 'getPackageVersion']
+                $this->getpackageVersion(...),
             ),
             new TwigFunction(
                 'pretty_package_version',
-                [$this, 'getPrettyPackageVersion']
+                $this->getPrettyPackageVersion(...),
             ),
         ];
     }
